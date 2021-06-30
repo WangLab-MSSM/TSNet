@@ -1,8 +1,13 @@
 # TSNet
 
-TSNet (Tumor Specific Net) is a new method which constructs tumor-cell specific gene/protein co-expression networks based on gene/protein expression profiles of tumor tissues. TSNet treats the observed expression profile as a mixture of expressions from different cell types and explicitly models tumor purity percentage in each tumor sample.
+A New Method for Constructing Tumor Specific Gene Co-Expression Networks Based on Samples with Tumor Purity Heterogeneity 
+ 
+To check how TSNet works run file R/TSNet_Estimation_Example.R which
 
-## Usage
+    1) Generates Synthetic Data as in section 3 of [1]
+    2) Estimates Tumor Purity
+    3) Estimates Co-expression networks for the tumor and non-tumor components for a given value of penalty parameters
+                
+We are currently working on the R package which will be submitted to R Cran as TSNet shortly.
 
-
-The main function - deNet - takes as input gene or protein expression profiles of bulk tumor data. This function returns the estimated purity, mean expression of different markers in tumor cells and non-tumor cells (combination of immune and stromal cells) and co-expression networks in tumor cells and non-tumor cells.
+[1] Francesca Petralia, Li Wang , Jie Peng , Arthur Yan, Jun Zhu and Pei Wang, A new method for constructing tumor specific gene co-expression networks based on samples with tumor purity heterogeneity.
